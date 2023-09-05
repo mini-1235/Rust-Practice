@@ -1,37 +1,33 @@
-# Hw1 myfind
+# Hw2 Three exercises
 
-This is a simple implementation of the find command. It supports the following options:
+## Exercise 1
 
-- –v/--verbose 参数输出所有遍历到的⽂件
-- 同时⽀持匹配多个正则
-- 给输出结果去重排序
-- tracing 库打⽇志
-- ⽀持命令⾏彩⾊输出
+Implement Buffer<T>, it should have a method that sum all the element in the memeber variable of type Vec<T>
 
-and some more common features of find
-
-### Build
-
-```bash
-cd myfind
-Cargo build
-./target/debug/myfind [-v|--verbose] <target directory> [-p<pattern_count>] <pattern1> <pattern2> ...
+Sample case
 
 ```
-
-For example
-
-```
-./target/debug/myfind    ~/Desktop/quick-demo  -p3 main 1 doc
+buf.buf.push(1);
+buf.buf.push(2);
+buf.buf.push(3);
 ```
 
-without verbose, three regex expressions
-![without verbose](https://i.imgur.com/ch4r9MR.png)
+The output should be 6
 
-with verbose, three regex expressions
+## Exercise 2
 
-![pGVJG4A](https://i.imgur.com/pGVJG4A.png)
+Implement a function compare_string that compare two string by dictionary order, if s1>s2 return true, else false
 
-### Warning
+## Exercise 3
 
-**This tool is a practice of Rust, and it is not intended to be used in production** : (
+Implement a function that takes an input Vec<char> a,b,c,d,e and output a Vec<char> b,c,d,e,f by using iterator and closure
+
+## How to run
+
+```
+cd hw2
+cargo run --bin <bin-name>
+```
+
+bin-name: exercise1, exercise2, exercise3
+![Alt text](image.png)
