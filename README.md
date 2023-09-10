@@ -1,31 +1,53 @@
-# Hw2 Three exercises
+# Hw3 Three exercises
 
 ## Exercise 1
 
-Implement Buffer<T>, it should have a method that sum all the element in the memeber variable of type Vec<T>
+Implement hash_map macro
+Sample case
+
+```
+let map = hash_map!{
+        "one" => 1,
+        "two" => 2,
+        "three" => 3
+    };
+srintln!("{:?}", map);
+```
+
+Output
+
+```
+{"one": 1, "two": 2, "three": 3}
+```
+
+## Exercise 2
+
+Implement MyRc, which has similar functionality as Rc
 
 Sample case
 
 ```
-buf.buf.push(1);
-buf.buf.push(2);
-buf.buf.push(3);
+let five = MyRc::new(5);
+let five2 = MyRc::clone(&five);
+println!("{}", *five);
+println!("{}", MyRc::strong_count(&five2));
 ```
 
-The output should be 6
+Output
 
-## Exercise 2
-
-Implement a function compare_string that compare two string by dictionary order, if s1>s2 return true, else false
+```
+5
+2
+```
 
 ## Exercise 3
 
-Implement a function that takes an input Vec<char> a,b,c,d,e and output a Vec<char> b,c,d,e,f by using iterator and closure
+Implement a stack, which supports push and pop, use RefCell
 
 ## How to run
 
 ```
-cd hw2
+cd hw3
 cargo run --bin <bin-name>
 ```
 
