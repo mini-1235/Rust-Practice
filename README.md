@@ -52,4 +52,3 @@ cargo run --bin <bin-name>
 ```
 
 bin-name: exercise1, exercise2, exercise3
-![Alt text](image.png)
